@@ -24,6 +24,7 @@ div {
 .p-inline-console.p-inline-visible {
     height: 100%;
     padding: 2% 0;
+    overflow: auto;
 }
 
 .p-inline-console-toggle {

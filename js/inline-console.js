@@ -43,7 +43,9 @@
         htmlElement = document.createElement('div');
         htmlElement.className = "p-inline-message";
         htmlElement.innerHTML = "<p>" + concatenatedString + "</p>";
+
         consoleElement.appendChild(htmlElement);
+        consoleElement.scrollTop = consoleElement.scrollHeight - consoleElement.clientHeight;
 
         switch(logLevel) {
             case LOG_LEVELS.LOG:
@@ -86,14 +88,14 @@
         if (Array.prototype.indexOf.call(consoleElement.classList, 'p-inline-visible') > -1) {
             consoleElement.className = consoleElement.className.replace('p-inline-visible', '');
         } else {
-            consoleElement.className += " p-inline-visible"
+            consoleElement.className += " p-inline-visible";
         }
     }
 
     function setupViewportWithMetaTag() {
         var meta = document.createElement('meta');
         meta.setAttribute('name', 'viewport');
-        meta.setAttribute('content', 'initial-scale=1, width=device-width, maximum-scale=1');
+        meta.setAttribute('content', 'width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, minimal-ui');
         document.head.appendChild(meta);
     }
 
