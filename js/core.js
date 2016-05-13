@@ -99,14 +99,3 @@
 
     window.toggleConsole = toggleConsole;
 })();
-
-window.console.log('The quick brown fox jumped over the lazy dog');
-window.console.log('The quick brown fox jumped over the lazy dog');
-window.console.log('The quick brown fox jumped over the lazy dog');
-window.console.log('The quick brown fox jumped over the lazy dog');
-window.console.log('The quick brown fox jumped over the lazy dog');
-window.console.log('The quick brown fox jumped over the lazy dog');
-window.console.log('The quick brown fox jumped over the lazy dog');
-window.console.log('The quick brown fox jumped over the lazy dog');
-window.console.log('The quick brown fox jumped over the lazy dog');
-window.console.log('The quick brown fox jumped over the lazy dog');
