@@ -7,8 +7,9 @@
     }
 
     setupViewportWithMetaTag();
-    setupConsoleElement();
+    setupStyles();
     setupToggleElement();
+    setupConsoleElement();
 
     var LOG_LEVELS = {
         LOG: 1,
@@ -66,22 +67,6 @@
         }
     }
 
-    function setupToggleElement() {
-        var toggleElement = document.createElement('div');
-        toggleElement.className = "p-inline-console-toggle";
-        toggleElement.style.zIndex = 9999;
-        toggleElement.onclick = toggleConsole;
-
-        document.body.appendChild(toggleElement);
-    }
-
-    function setupConsoleElement() {
-        var consoleElement = document.createElement('div');
-        consoleElement.className = "p-inline-console";
-
-        document.body.appendChild(consoleElement);
-    }
-
     function toggleConsole() {
         var consoleElement = document.querySelector('.p-inline-console');
 
@@ -97,6 +82,29 @@
         meta.setAttribute('name', 'viewport');
         meta.setAttribute('content', 'width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, minimal-ui');
         document.head.appendChild(meta);
+    }
+
+    function setupStyles() {
+        var link = document.createElement('link');
+        link.setAttribute('rel', 'stylesheet');
+        link.setAttribute('href', 'http://rawgit.com/jamiemcl001/inline-console/master/css/inline-console.css');
+        document.head.appendChild(link);
+    }
+
+    function setupToggleElement() {
+        var toggleElement = document.createElement('div');
+        toggleElement.className = "p-inline-console-toggle";
+        toggleElement.style.zIndex = 9999;
+        toggleElement.onclick = toggleConsole;
+
+        document.body.appendChild(toggleElement);
+    }
+
+    function setupConsoleElement() {
+        var consoleElement = document.createElement('div');
+        consoleElement.className = "p-inline-console";
+
+        document.body.appendChild(consoleElement);
     }
 
     window.toggleConsole = toggleConsole;
