@@ -19,7 +19,6 @@ div {
     z-index: 9998;
     -webkit-transform: translate(0, 0);
     top: 0;
-    box-sizing: border-box;
 }
 
 .p-inline-console.p-inline-visible {
